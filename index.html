@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo</title><link rel="stylesheet" href="style.css">
+<script>/* lingua: ?lang=es | ?lang=it (default it) */document.write('<script src="config-'+((new URLSearchParams(location.search).get('lang')||'it').replace(/[^a-z]/g,''))+'.js"><\/script>');</script>
+<script src="matcher.js"></script></head><body>
+<header class="hero"><div class="logo" id="logo"></div><h1 id="nombre"></h1><p id="eslogan"></p>
+<button class="cta" id="cta"></button></header>
+<main><section class="cards">
+<div class="card"><h3 id="hOrario"></h3><p id="orario"></p></div>
+<div class="card"><h3 id="hDove"></h3><p id="dir"></p></div>
+<div class="card"><h3 id="hAss"></h3><p id="pAss"></p></div>
+</section></main><footer id="foot"></footer>
+<div id="bot-btn" onclick="Bot.toggle()">💬</div>
+<div id="bot" class="hidden"><div class="bh"><span id="bname"></span><span onclick="Bot.toggle()" style="cursor:pointer">✕</span></div>
+<div id="msgs"></div><div id="sugs"></div>
+<form id="bf"><input id="bi" autocomplete="off"><button>➤</button></form></div>
+<script src="bot.js"></script></body></html>
